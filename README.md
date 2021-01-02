@@ -3,7 +3,7 @@
 ## INTRODUCTION
 **Problem Statement:**
 
-The goal of this analysis is to analyze the factors that determine the price of Airbnb listing in New York City. Using a variety of factors such as neighbourhood, burrow, proximity to New York City attractions, number of bedrooms, and type of listing, the aim is to estimate the price of listings.
+The goal of this analysis is to analyze the factors that determine the price of Airbnb listing in New York City. Using a variety of factors such as neighborhood, burrow, proximity to New York City attractions, number of bedrooms, and type of listing, the aim is to estimate the price of listings.
 
 **Significance of the Problem:**
 
@@ -24,7 +24,7 @@ Kaggle Dataset: https://www.kaggle.com/dgomonov/new-york-city-airbnb-open-data
     * Host ID: ID of the host assigned by Airbnb
     * Name of the Host: Owner of the listing
     * Location: Manhattan, Brooklyn, Queens, Bronx, Staten Island
-    * Neighbourhood: the neighbourhood the listing is located in (ex: Harlem, Midtown)
+    * Neighborhood: the neighbourhood the listing is located in (ex: Harlem, Midtown)
     * Latitude: Coordinate of the listing
     * Longitude: Coordinate of the listing
     * Listing Space Type: Private Home vs Entire home/apt 
@@ -34,7 +34,7 @@ Kaggle Dataset: https://www.kaggle.com/dgomonov/new-york-city-airbnb-open-data
 
 ### Summary of Analysis
 
-In order to analyze our data, I began by visualizing the dataset through the use of boxplots, histograms, and a series of maps that that plotted the individual tourist sites, listings, and both together on a map on New York City. Then we proceeded to use feature engineering to exclude a few categorical varibles and split variables such as Location and Neighbourhood into groups. I proceeded to test a few classifiers such as Linear, Lasso, Ridge, kNN, SVR, and the MLP regressors. In order to improve the performace I ran the regressors once again while using the natural log of the prices in order to have a noraml distributions. This greately improved the accuracy of the Linear, Ridge, SVR, and Lasso regressors. However, the R-squared values were quite low. Based on these results, I used Recursive Feature Elimination in order to reduce the number of variables in the dataset in hopes of improving the accuracy of the kNN regressor. As a result, this modification slightly improved the performance of the kNN regressor. However the MLP regressor had the better performance when using all 290 features.   
+In order to analyze our data, I began by visualizing the dataset through the use of boxplots, histograms, and a series of maps that that plotted the individual tourist sites, listings, and both together on a map on New York City. Then we proceeded to use feature engineering to exclude a few categorical variables and split variables such as Location and Neighborhood into groups. I proceeded to test a few classifiers such as Linear, Lasso, Ridge, kNN, SVR, and the MLP regressors. In order to improve the performance I ran the regressors once again while using the natural log of the prices in order to have a normal distributions. This greatly improved the accuracy of the Linear, Ridge, SVR, and Lasso regressors. However, the R-squared values were quite low. Based on these results, I used Recursive Feature Elimination in order to reduce the number of variables in the dataset in hopes of improving the accuracy of the kNN regressor. As a result, this modification slightly improved the performance of the kNN regressor. However, the MLP regressor had the better performance when using all 290 features.   
 
 
 ### Interpretation of Findings
@@ -45,8 +45,8 @@ I compared Linear, Ridge, Lasso, kNN, SVR, and  the MLP regressors.
 ***Algorithms with Best Performance***
 MLP Regression had an R-squared value of 0.4724 on the training set and 0.4218 on the testing set. This indicates that the model fit the dataset quite well and the testing set showed that this model has potential as it has ~65% accuracy.
 
-kNN Regression had an R-squared value of 0.4889 on the training set and 0.3455 on the testing set when using Recursive Feature Elimination. This indicates that the model slighlty overfit the dataset quite and the testing set showed that this model was an average fit for the dataset, but did not perform as well as the MLP regressor for the given data.
+kNN Regression had an R-squared value of 0.4889 on the training set and 0.3455 on the testing set when using Recursive Feature Elimination. This indicates that the model slightlty overfit the dataset and the testing set showed that this model was an average fit for the dataset, but did not perform as well as the MLP regressor for the given data.
 
 ***Algorithms for Use in Predictive Model***
 
-The MLP regressor had the best fit for this dataset and utilized a variety of variables to output better predictions. This regressors also embodies the fact that a large number of features are important when determing where to open an Airbnb and at what price to do so. This model has a ~65% accuracy and that is a reasonable accuracy for a versatile question.
+The MLP regressor had the best fit for this dataset and utilized a variety of variables to output better predictions. This regressors also embodies the fact that a large number of features are important when determining where to open an Airbnb and at what price to do so. This model has a ~65% accuracy and that is a reasonable accuracy for a versatile question.
