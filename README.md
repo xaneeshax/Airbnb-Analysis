@@ -32,7 +32,7 @@ Kaggle Dataset: https://www.kaggle.com/dgomonov/new-york-city-airbnb-open-data
 * Target Variable: Price of the listing (in dollars)
 
 
-## Conclusion
+## CONCLUSION
 ### Summary of Analysis
 
 In order to analyze our data, I began by visualizing the dataset through the use of boxplots, histograms, and a series of maps that that plotted the individual tourist sites, listings, and both together on a map on New York City. Then we proceeded to use feature engineering to exclude a few categorical variables and split variables such as Location and Neighborhood into groups. I proceeded to test a few classifiers such as Linear, Lasso, Ridge, kNN, SVR, and the MLP regressors. In order to improve the performance, I ran the regressors once again while using the natural log of the prices in order to have a normal distribution. This greatly improved the accuracy of the Linear, Ridge, SVR, and Lasso regressors. However, the R-squared values were quite low. Based on these results, I used Recursive Feature Elimination in order to reduce the number of variables in the dataset in hopes of improving the accuracy of the kNN regressor. As a result, this modification slightly improved the performance of the kNN regressor. However, the MLP regressor had the better performance when using all 290 features.   
