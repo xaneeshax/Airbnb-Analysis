@@ -41,9 +41,11 @@ In order to analyze our data, I began by visualizing the dataset through the use
 ### Interpretation of Findings
 
 ***Algorithms Compared***
+
 I compared Linear, Ridge, Lasso, kNN, SVR, and  the MLP regressors.
 
 ***Algorithms with Best Performance***
+
 MLP Regression had an R-squared value of 0.4724 on the training set and 0.4218 on the testing set. This indicates that the model fit the dataset quite well and the testing set showed that this model has potential as it has ~65% accuracy.
 
 kNN Regression had an R-squared value of 0.4889 on the training set and 0.3455 on the testing set when using Recursive Feature Elimination. This indicates that the model slightlty overfit the dataset and the testing set showed that this model was an average fit for the dataset, but did not perform as well as the MLP regressor for the given data.
